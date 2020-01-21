@@ -61,5 +61,14 @@
 </div>
 <br>
     <button type="submit" class="btn btn-primary">Submit</button><a href="/" class="btn btn-success">Back</a>
+    @if($errors->any)
+      <div class="notification bg-danger">
+        <ul>
+          @foreach($errors->all() as $error)
+            <li>{{ $error }}</li>
+          @endforeach
+        </ul>
+      </div>
+    @endif
     </form>
 @endsection
