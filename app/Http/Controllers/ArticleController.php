@@ -12,10 +12,7 @@ class ArticleController extends Controller
 {
     // welcome page
 	public function welcome(){
-		$article = new articleModel;
-		$results = $article::all();
-
-		
+		$results = articleModel::all();
 		return view('welcome',compact('results'))	;
 	}
 

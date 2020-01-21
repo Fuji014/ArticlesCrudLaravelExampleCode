@@ -9,13 +9,13 @@
     <form action="/" method="post">
       {{ csrf_field() }}
     <div class="form-group">
-      <label for="title">Name: </label>
-      <input type="text" class="form-control" id="idTitle" aria-describedby="emailHelp" placeholder="Enter Name" name="title">
+      <label for="title">Name: </label> 
+      <input type="text" class="form-control {{ $errors->has('title') ? 'is-invalid' : '' }}" id="idTitle" aria-describedby="emailHelp" placeholder="Enter Name" name="title">
     </div> 
 
     <div class="form-group">
       <label for="Description">Lastname: </label>
-      <input type="text" class="form-control" id="Description" aria-describedby="Description" placeholder="Enter Lastname" name="description">
+      <input type="text" class="form-control {{ $errors->has('description') ? 'is-invalid' : '' }}" id="Description" aria-describedby="Description" placeholder="Enter Lastname" name="description">
     </div>
 
     <div class="form-group">
