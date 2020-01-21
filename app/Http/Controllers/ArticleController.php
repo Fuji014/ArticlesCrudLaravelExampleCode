@@ -26,10 +26,12 @@ class ArticleController extends Controller
 
 	// articles create
 	public function store(){
+		// create validation
 		request()->validate([
 			'title' => 'required',
 			'description' => 'required'
 		]);
+		// end of validation
 		$article = new articleModel;
 		$article->title = request('title');
 		$article->description = request('description');
